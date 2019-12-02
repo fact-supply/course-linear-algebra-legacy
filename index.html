@@ -40,32 +40,32 @@ h1 {
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-153492261-1"></script>
     <script>
-var favIcon = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAGfSURBVHjaYnz64hEDKQAggJgYSAQAAUSyBoAAFMtBEgAwBASwpfj/exXbOmdim1TDg4AAQ3a3u1eVCI4a8WUpb87ME0AszMzML14937BjEdwML6fwbftWAhnWJm5Hz+yCi4d4JYiKSAAEEBNQw4/v35Atff7iCYRx684NZPH3H94BFQMEECMklP7/B9n75+8fZiYmdnaOnz9/Al0FdMv3n9+ZmZj//fvLBDKZGagGIIBATnr79vXqrfOAHFtTj8OndyCbqiSrfe3GJQ5ukFJ9DUsrM3uAAAJ6mAloMET646f3aGEiwC8gIiwKYXNz87CwsAAEEMhJjIxM////A0ImZkYgGxg+TCAWAzBMgFxGhv9AAuxkkMsBAgioh/Xly2frdiyEGGOqa3/68kEgw83W12a2BERwRcADayNtRiY2oBaAAAI56ftPRCh9/PwBwvj29Qtc8MPnz////YWwAQKI8dnLx3///vn2/RvQVawsbMwsLMBQBpLsbOzffv7/+YeRmYmBm+0/GxsrRANAADGSmvgAAojktAQQQCRrAAgwAM59mIIvmO3ZAAAAAElFTkSuQmCC";
-var docHead = document.getElementsByTagName('head')[0];
-var newLink = document.createElement('link');
-newLink.rel = 'shortcut icon';
-newLink.type = 'image/x-icon';
-newLink.href = 'data:image/png;base64,'+favIcon;
-docHead.appendChild(newLink);
+      var favIcon = "iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAAABGdBTUEAAK/INwWK6QAAABl0RVh0U29mdHdhcmUAQWRvYmUgSW1hZ2VSZWFkeXHJZTwAAAGfSURBVHjaYnz64hEDKQAggJgYSAQAAUSyBoAAFMtBEgAwBASwpfj/exXbOmdim1TDg4AAQ3a3u1eVCI4a8WUpb87ME0AszMzML14937BjEdwML6fwbftWAhnWJm5Hz+yCi4d4JYiKSAAEEBNQw4/v35Atff7iCYRx684NZPH3H94BFQMEECMklP7/B9n75+8fZiYmdnaOnz9/Al0FdMv3n9+ZmZj//fvLBDKZGagGIIBATnr79vXqrfOAHFtTj8OndyCbqiSrfe3GJQ5ukFJ9DUsrM3uAAAJ6mAloMET646f3aGEiwC8gIiwKYXNz87CwsAAEEMhJjIxM////A0ImZkYgGxg+TCAWAzBMgFxGhv9AAuxkkMsBAgioh/Xly2frdiyEGGOqa3/68kEgw83W12a2BERwRcADayNtRiY2oBaAAAI56ftPRCh9/PwBwvj29Qtc8MPnz////YWwAQKI8dnLx3///vn2/RvQVawsbMwsLMBQBpLsbOzffv7/+YeRmYmBm+0/GxsrRANAADGSmvgAAojktAQQQCRrAAgwAM59mIIvmO3ZAAAAAElFTkSuQmCC";
+      var docHead = document.getElementsByTagName('head')[0];
+      var newLink = document.createElement('link');
+      newLink.rel = 'shortcut icon';
+      newLink.type = 'image/x-icon';
+      newLink.href = 'data:image/png;base64,'+favIcon;
+      docHead.appendChild(newLink);
 
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'UA-153492261-1');
-    </script>
-    <script>
-function init() {
-  var files = 25;
-  var pick = (Math.round(Math.min(files-1,Math.random()*files))+'').padStart(10, '0');
-  fetch('data/'+pick)
-  .then((resp) => resp.text())
-  .then(function(data) {
-      var lines = data.split("\n");
-      var fact_url = lines[Math.round(Math.random()*lines.length)].split("|");
-      var html = fact_url[0] + ' [<a href="' + fact_url[1] + '"><i class="fa fa-wikipedia-w"></i></a>]';
-      document.getElementById("fact").innerHTML = html;
-  })
-}
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-153492261-1');
+        </script>
+        <script>
+      function init() {
+        var files = 25;
+        var pick = (Math.round(Math.min(files-1,Math.random()*files))+'').padStart(10, '0');
+        fetch('data/'+pick)
+        .then((resp) => resp.text())
+        .then(function(data) {
+            var lines = data.split("\n");
+            var fact_url = lines[Math.round(Math.random()*lines.length)].split("|");
+            var html = fact_url[0] + ' [<a href="' + fact_url[1] + '"><i class="fa fa-wikipedia-w"></i></a>]';
+            document.getElementById("fact").innerHTML = html;
+        })
+      }
     </script>
   </head>
   <body class="text-center" onload="init();">
